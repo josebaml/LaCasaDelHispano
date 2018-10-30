@@ -2,8 +2,6 @@ Firefox y Chrome:
 
 	Tama�o general:
 		- Logo
-		- Revisar animaci�n nav principal(Solo en IE11 se ve el retroceso de la animaci�n).
-		- Revisar formulario y mapa.
 		- PHP para env�ar correo.
 		
 

@@ -19,7 +19,7 @@
         $(this).toggleClass('open');
         $('.nav').toggleClass('nav--hidden');
       });
-        
+        /* Nav Menú */
         $('.nav__a').click(function(e){  
         $('.nav').toggleClass('nav--hidden'); 
         $('.header__menu-toggle').toggleClass('open');    
@@ -28,8 +28,19 @@
         $('body,html').stop(true,true).animate({        
         scrollTop: $(strAncla).offset().top
         },1000);
+      });
+        
+        /* Header Menú */
+        $('.header__a').click(function(e){     
+        e.preventDefault();   //evitar el eventos del enlace normal
+        var strAncla=$(this).attr('href'); //id del ancla
+        $('body,html').stop(true,true).animate({        
+        scrollTop: $(strAncla).offset().top
+        },1000);
 
       });
+
+        /* Logo */
         $('header__logo > a').click(function(e){       
         e.preventDefault();   //evitar el eventos del enlace normal
         var strAncla=$(this).attr('href'); //id del ancla
@@ -38,7 +49,7 @@
         },1000);
       });
       
-      //Validacion
+      /* Validacion */
       $("#formulario_contacto").validate({
         rules:{
           name: {
@@ -248,7 +259,7 @@
     </ul>
     <div class="form">
       <div class="form__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.453246016908!2d-3.6473986844298043!3d41.23368401347217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4407432dffbf01%3A0x731644d15875eeb4!2sCalle+E%2C+116%2C+40312+Duruelo%2C+Segovia!5e0!3m2!1ses!2ses!4v1524560109204" width="800" height="600" frameborder="0" style="border:0" allowfullscreen class="form__iframe"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.453246016908!2d-3.6473986844298043!3d41.23368401347217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4407432dffbf01%3A0x731644d15875eeb4!2sCalle+E%2C+116%2C+40312+Duruelo%2C+Segovia!5e0!3m2!1ses!2ses!4v1524560109204" width="800" height="800" frameborder="0" style="border:0" allowfullscreen class="form__iframe"></iframe>
       </div>
       <form class="form__contact" action="#" method="POST" id="formulario_contacto">
         <input type="text" id="name" class="form__item" name="name" placeholder="Nombre Completo" required/>
