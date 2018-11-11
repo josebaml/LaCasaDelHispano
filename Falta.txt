@@ -1,8 +1,0 @@
-Firefox y Chrome:
-
-	Tama�o general:
-		- Logo
-		- PHP para env�ar correo.
-		
-
-	

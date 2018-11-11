@@ -354,7 +354,7 @@ body{
     background-size: 0.9em;
   }
   &__location{
-    background: url("../images/iconoDirec2.svg") no-repeat left;
+    background: url("../images/iconoDirec.svg") no-repeat left;
     background-size: 0.9em;
   }
 }
@@ -485,6 +485,9 @@ body{
       height: 100%;
       height: auto;
       align-self: stretch;
+    }
+    &__iframe{
+      height: 100%;
     }
     &__contact{
       max-width: 45vw;
