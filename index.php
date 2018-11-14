@@ -52,6 +52,11 @@
         $success = mail($to_address, $subject, $message, $headers);
 
         /***** Crear un script javascript de aviso del envío realizado *****/
+        if($uccess){
+          //Mensaje de envío correcto.
+        }else{
+          //Mensaje de envío erroneo.
+        }
       }
     
     }
