@@ -44,7 +44,6 @@
         $from_address = 'info@lacasadelhispano.com';
         $subject = 'Mensaje La casa Del Hispano';
         $message = $message;
-        //$headers = array();
         $headers = 'MIME-Version: 1.0\n';
         $headers .= 'Content-type: text/html; charset = iso-8859-1\n';
         //$headers[] = 'Content-Transfer-Encoding: 7bit';
@@ -53,9 +52,21 @@
 
         /***** Crear un script javascript de aviso del envío realizado *****/
         if($uccess){
-          //Mensaje de envío correcto.
+        ?>
+        <script type="text/javascript">
+          $(function(){
+              ohSnap('El correo se ha enviado correctamente. <br/> En Breve nos pondremos en contacto con usted', {color: 'green'});  // alert will have class 'alert-color'
+          });
+        </script>
+        <?php
         }else{
-          //Mensaje de envío erroneo.
+        ?>
+        <script type="text/javascript">
+          $(function(){
+              ohSnap('Ha ocurrido un error durante el envío, intentelo de nuevo', {color: 'red'});  // alert will have class 'alert-color'
+          });
+        </script>
+        <?php
         }
       }
     
@@ -74,6 +85,7 @@
   <link rel="stylesheet" href="css/lightbox.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/lightbox-plus-jquery.min.js"></script>
+  <script src="js/ohsnap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
   <!-- Para los métodos de validación integramos este script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>

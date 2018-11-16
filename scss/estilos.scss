@@ -440,6 +440,43 @@ body{
   padding-left: .5em;
 }
 
+/* Mensajes error */
+.alert {
+  padding: 1em 2em;
+  max-width: 20em;
+  text-align: justify;
+  border: 1px solid #eed3d7;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 50%;
+  right: calc(50% - 10em);
+  /* Each alert has its own width */
+  /*float: right;
+  clear: right;
+  background-color: rgb(196, 52, 52);*/
+}
+
+.alert-red {
+  color: white;
+  background-color: #DA4453;
+}
+.alert-green {
+  color: white;
+  background-color: #37BC9B;
+}
+.alert-blue {
+  color: white;
+  background-color: #4A89DC;
+}
+.alert-yellow {
+  color: white;
+  background-color: #F6BB42;
+}
+.alert-orange {
+  color:white;    
+  background-color: #E9573F;
+}
+
 /**** Media Queries *****/
 
 @media screen and (min-width:550px) {
