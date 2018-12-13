@@ -46,8 +46,12 @@ body{
   z-index: 1;
 }
 .header__logo{
-  padding-left: 1em;
+  width: 55px;
+  height: auto;
+  margin-left: 1em;
+  margin-top: .3em;
 }
+
 .header__menu-toggle {
   height: 30px;
   width: 30px;
@@ -432,9 +436,13 @@ body{
 }
 /*mensajes error formulario*/
 .error{
-  padding: .5em 0;
+  //padding: .5em 0;
   margin: .5em 0 ;
   color: #FF7F00;
+}
+.error:last-child{
+  display: inline-block; 
+  margin-top: 0;
 }
 .form__item.error{
   padding-left: .5em;
@@ -650,8 +658,8 @@ body{
 @media screen and (min-width:1062px) {
   /*** galería de imágenes ***/
   .gallery__item{
-    width: 25vw;
-    height: 25vw;
+    width: 32vw;
+    height: 32vw;
   }
 }
 
