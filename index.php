@@ -1,5 +1,4 @@
 <?php
-
     //validar datos
     $name = (isset($_POST['name'])) ? trim($_POST['name']) : '';
     $email = (isset($_POST['email'])) ? trim($_POST['email']) : '';
@@ -83,83 +82,11 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/lightbox.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/lightbox-plus-jquery.min.js"></script>
-  <script src="js/ohsnap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-  <!-- Para los métodos de validación integramos este script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.header__menu-toggle').click(function(){
-        $(this).toggleClass('open');
-        $('.nav').toggleClass('nav--hidden');
-      });
-        /* Nav Menú */
-        $('.nav__a').click(function(e){  
-        $('.nav').toggleClass('nav--hidden'); 
-        $('.header__menu-toggle').toggleClass('open');    
-        e.preventDefault();   //evitar el eventos del enlace normal
-        var strAncla=$(this).attr('href'); //id del ancla
-        $('body,html').stop(true,true).animate({        
-        scrollTop: $(strAncla).offset().top
-        },1000);
-      });
-        
-        /* Header Menú */
-        $('.header__a').click(function(e){     
-        e.preventDefault();   //evitar el eventos del enlace normal
-        var strAncla=$(this).attr('href'); //id del ancla
-        $('body,html').stop(true,true).animate({        
-        scrollTop: $(strAncla).offset().top
-        },1000);
-
-      });
-
-        /* Logo */
-        $('header__logo > a').click(function(e){       
-        e.preventDefault();   //evitar el eventos del enlace normal
-        var strAncla=$(this).attr('href'); //id del ancla
-        $('body,html').stop(true,true).animate({        
-        scrollTop: $(strAncla).offset().top
-        },1000);
-      });
-      
-      /* Validacion */
-      $("#formulario_contacto").validate({
-        rules:{
-          name: {
-            required: true,
-          },
-          tel:{
-            required: true,
-            minlength: 9,
-            digits: true
-          },
-          email:{
-            required: true,
-            email: true
-          },
-          message:{
-            required: true
-          }
-        }
-      });
-      $.extend( $.validator.messages, {
-        required: "Este campo es obligatorio.",
-        email: "Por favor, escriba una dirección de correo válida.",
-        digits: "Por favor, escriba sólo dígitos.",
-        maxlength: $.validator.format( "Por favor, no escriba más de {0} caracteres." ),
-        minlength: $.validator.format( "Por favor, no escriba menos de {0} caracteres." )
-
-      });
-  });
-  </script>
 </head>
 <body>
   <section id="hero" class="hero">
     <header class="header">
-      <h1 class="header__logo"><a href="#hero">Logo</a></h1>
+      <h1 class="header__logo"><a href="#hero"><img src="images\logo.svg" alt="imagen Logo"/></a></h1>
       <div class="header__menu-toggle">
           <span></span>
       </div>
@@ -339,10 +266,10 @@
       </div>
       <form class="form__contact" action="#" method="POST" id="formulario_contacto">
         <input type="text" id="name" class="form__item" name="name" placeholder="Nombre Completo" required/>
-        <input type="tel" id="phone" class="form__item" name="phone" placeholder="Teléfono" pattern="^[9|8|7|6]\d{8}$" title="Debe introducir un número de teléfono válido" required/>
+        <input type="tel" id="tel" class="form__item" name="tel" placeholder="Teléfono" pattern="^[9|8|7|6]\d{8}$" title="Debe introducir un número de teléfono válido" required/>
         <input id="email" class="form__item" name="email" placeholder="Correo electrónico" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="Debe introducir una dirección de correo válida" required/>
         <textarea id="message" class="form__item" name="message" placeholder="Escribe tu mensaje..." rows="8" required></textarea>
-        <input type="submit" name="submit" class="form__item form__submit" value="Enviar" >
+        <input type="submit" class="form__item form__submit" value="Enviar" >
       </form>
     </div>
 </section>
@@ -359,5 +286,76 @@
     <a href="mailto:josebaml@gmail.com" class="footer__email--color">© 2018 Joseba Moreno</a>
   </p>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<!-- Para los métodos de validación integramos este script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.header__menu-toggle').click(function(){
+      $(this).toggleClass('open');
+      $('.nav').toggleClass('nav--hidden');
+    });
+      /* Nav Menú */
+      $('.nav__a').click(function(e){  
+      $('.nav').toggleClass('nav--hidden'); 
+      $('.header__menu-toggle').toggleClass('open');    
+      e.preventDefault();   //evitar el eventos del enlace normal
+      var strAncla=$(this).attr('href'); //id del ancla
+      $('body,html').stop(true,true).animate({        
+      scrollTop: $(strAncla).offset().top
+      },1000);
+    });
+      
+      /* Header Menú */
+      $('.header__a').click(function(e){     
+      e.preventDefault();   //evitar el eventos del enlace normal
+      var strAncla=$(this).attr('href'); //id del ancla
+      $('body,html').stop(true,true).animate({        
+      scrollTop: $(strAncla).offset().top
+      },1000);
+
+    });
+
+      /* Logo */
+      $('.header__logo > a').click(function(e){       
+      e.preventDefault();   //evitar el eventos del enlace normal
+      var strAncla=$(this).attr('href'); //id del ancla
+      $('body,html').stop(true,true).animate({        
+      scrollTop: $(strAncla).offset().top
+      },1000);
+    });
+    
+    /* Validacion */
+    $("#formulario_contacto").validate({
+      rules:{
+        name: {
+          required: true,
+        },
+        tel:{
+          required: true,
+          minlength: 9,
+          digits: true
+        },
+        email:{
+          required: true,
+          email: true
+        },
+        message:{
+          required: true
+        }
+      }
+    });
+    $.extend( $.validator.messages, {
+      required: "Este campo es obligatorio.",
+      email: "Por favor, escriba una dirección de correo válida.",
+      digits: "Por favor, escriba sólo dígitos.",
+      maxlength: $.validator.format( "Por favor, no escriba más de {0} caracteres." ),
+      minlength: $.validator.format( "Por favor, no escriba menos de {0} caracteres." )
+
+    });
+});
+</script>
 </body>
 </html>
