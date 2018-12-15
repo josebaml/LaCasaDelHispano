@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:300,600');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto+Condensed');
 @import 'variable.scss';
-/*
-font-family: 'Montserrat', sans-serif;
-font-family: 'Dosis', sans-serif;
-*/
 body{
   font-family: 'Dosis', sans-serif;
   font-weight: 300;
   font-size: 1.188em;
   letter-spacing: 1.5px;
 }
-
 /***** Hero section *****/
 .hero{
   background-color: $color_rojo;
@@ -51,7 +46,6 @@ body{
   margin-left: 1em;
   margin-top: .3em;
 }
-
 .header__menu-toggle {
   height: 30px;
   width: 30px;
@@ -234,7 +228,6 @@ body{
               flex-direction: column;
     }
   }
-  
   .map, .house, .tourism{
     text-align: center;
     padding: 1em 2em;
@@ -315,8 +308,6 @@ body{
     object-fit: cover;
   }
 }
-
-
 /***** Contact section *****/
 .contact {
   background-color: $color_rojo;
@@ -333,19 +324,23 @@ body{
     font-size: 1.7em;
   }
   &__text{
-    padding: 1.5em 2em;
+    padding: 1.5em;
     line-height: 1.6;
   }
   &__details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     justify-content: center;
-    padding: 0 2em 1em;
+    align-items: center;
+    margin-bottom: 1.5em;
   }
   &__location, &__phone, &__email {
-    padding: .5em 1.7em;
+    padding: .7em 1.7em;
     font-size: .9em;
   }
   &__email{
@@ -361,17 +356,20 @@ body{
     background: url("../images/iconoDirec.svg") no-repeat left;
     background-size: 0.9em;
   }
-}
-.form{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  &__dataMap{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__data{
+    max-width: 90%;
+  }
   &__map{
     max-width: 90%;
     overflow: hidden;
@@ -383,37 +381,7 @@ body{
     max-width: 100%;
     height: 300px;
   }
-  &__contact{
-    max-width: 90%;
-  }
-  &__item{
-    margin-bottom: 1em;
-    border: 1px solid $color_bronce;
-    width:100%;
-    padding: .6em .8em;
-    box-sizing: border-box;
-    border-radius: 2px;
-    color: $color_gris;
-    &:focus{
-      box-shadow: inset 0 0 7px $color_bronce,
-      0 0 10px $color_bronce;
-      
-      }
-  }
-  &__submit{
-    background: $color_bronce;
-    color: $color_blanco;
-    padding: .5em 0 .6em 0;
-    font-size: 1.3em;
-    transition: all .5s ease-in-out;
-    &:hover{
-      background: $color_blanco;
-      color: $color_bronce;
-      box-shadow: inset 0 0 0 3px $color_bronce;
-    }
-  }
 }
-
 /**** Footer section *****/
 .footer{
   padding: 1.5em 0;
@@ -434,60 +402,10 @@ body{
     margin: 0 .3em;
   }
 }
-/*mensajes error formulario*/
-.error{
-  //padding: .5em 0;
-  margin: .5em 0 ;
-  color: #FF7F00;
-}
-.error:last-child{
-  display: inline-block; 
-  margin-top: 0;
-}
-.form__item.error{
-  padding-left: .5em;
-}
-
-/* Mensajes error */
-.alert {
-  padding: 1em 2em;
-  max-width: 20em;
-  text-align: justify;
-  border: 1px solid #eed3d7;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 50%;
-  right: calc(50% - 10em);
-  /* Each alert has its own width */
-  /*float: right;
-  clear: right;
-  background-color: rgb(196, 52, 52);*/
-}
-
-.alert-red {
-  color: white;
-  background-color: #DA4453;
-}
-.alert-green {
-  color: white;
-  background-color: #37BC9B;
-}
-.alert-blue {
-  color: white;
-  background-color: #4A89DC;
-}
-.alert-yellow {
-  color: white;
-  background-color: #F6BB42;
-}
-.alert-orange {
-  color:white;    
-  background-color: #E9573F;
-}
 
 /**** Media Queries *****/
-
 @media screen and (min-width:550px) {
+  /*** Footer ***/
   .footer{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -501,6 +419,7 @@ body{
       padding: 0 1.5em;
     }
   }
+  /*** Gallery ***/
   .gallery__container{
     -webkit-box-orient: row;
     -webkit-box-direction: row;
@@ -514,19 +433,79 @@ body{
       height: 40vw;
       margin: .5em;
   }
+  /*** Contact ***/
+  .contact__location, .contact__phone, .contact__email {
+    padding: 1em 2em;
+    font-size: 1em;
+  }
+  .contact__email{
+    color: $color_bronce;
+    background: url("../images/iconoMail.svg") no-repeat left;
+    background-size: 1em;
+  }
+  .contact__phone{
+    background: url("../images/whatsapp.svg") no-repeat left;
+    background-size: 1em;
+  }
+  .contact__location{
+    background: url("../images/iconoDirec.svg") no-repeat left;
+    background-size: 1em;
+  }
 
 }
 @media screen and (min-width:800px) {
-  .form{
-    -webkit-box-orient: row;
-    -webkit-box-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &__map{
+  /*** Contact ***/
+  .contact{
+    min-height: 83vh;
+    &__title{
+      padding-bottom: 0;
+      margin-bottom: 3em;
+    }
+    &__dataMap{
+      -webkit-box-orient: row;
+      -webkit-box-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__data{
+      order: 2;
       max-width: 45vw;
-      margin: 0 0 1.3em 1em;
+      margin-right: 1em;
+      padding-bottom: 3em;
+    }
+    &__text{
+      padding: 0;
+      margin:0;
+      margin-top: -.5em;
+      text-align: justify;
+    }
+    &__details{
+      margin-bottom: 0;
+      align-items: flex-start;
+    }
+    &__location, &__phone, &__email {
+      padding: 1em 3em;
+      font-size: 1.2em;
+    }
+    &__email{
+      color: $color_bronce;
+      background: url("../images/iconoMail.svg") no-repeat left;
+      background-size: 1.8em;
+    }
+    &__phone{
+      background: url("../images/whatsapp.svg") no-repeat left;
+      background-size: 1.8em;
+    }
+    &__location{
+      background: url("../images/iconoDirec.svg") no-repeat left;
+      background-size: 1.8em;
+    }
+    &__map{
+      order: 1;
+      max-width: 45vw;
+      margin:0 0 0 1em;
       height: 100%;
       height: auto;
       align-self: stretch;
@@ -534,12 +513,8 @@ body{
     &__iframe{
       height: 100%;
     }
-    &__contact{
-      max-width: 45vw;
-      margin-right: 1em;
-    }
   }
-    /*** Contenedor servicios ***/
+  /*** Services container ***/
   .domus__container{
     -webkit-box-orient: row;
     -webkit-box-direction: row;
@@ -551,7 +526,7 @@ body{
   .map, .house, .tourism{
     width: 49%;
   }
-    /*** Menú principal ***/
+  /*** Header ***/
   .header__menu-toggle, .nav{
     display: none;
   }
@@ -594,12 +569,12 @@ body{
   }
 }
 @media screen and (min-width:900px) {
-    /*** galería de imágenes ***/
+  /*** Gallery ***/
   .gallery__item{
     width: 30vw;
     height: 30vw;
   }
-    /*** Servicios ***/
+  /*** Services ***/
   .domus__container{
     justify-content: space-between;
   }
@@ -607,17 +582,7 @@ body{
     width: 33%;
     margin-top: 3em;
   }
-
-    /*** Contacto ***/
-  .contact__text{
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
-  }
-  .contact__details{
-    margin-bottom: 1em;
-  }
-
-    /*** header ***/
+  /*** Header ***/
   .header{
     padding: .9em 0 1em 0;
     &__logo{
@@ -635,17 +600,11 @@ body{
       padding: 0 .7em;
     }
   }
-  /*** Títulos ***/
-  .domus__title, .gallery_title{
+  /*** Títles ***/
+  .domus__title, .gallery_title, .contact__title{
     padding-top: 2.5em;
   }
-  .contact__title{
-    padding-top: 2.3em;
-  }
-  /*** Textos ***/
-  .contact__text{
-    padding: 1em 2em;
-  }
+  /*** Texts ***/
   .modal{
     top: 40%;
   }
@@ -653,15 +612,42 @@ body{
     display: block;
     margin-bottom: 1em;
   }
-}
-
-@media screen and (min-width:1062px) {
-  /*** galería de imágenes ***/
-  .gallery__item{
-    width: 32vw;
-    height: 32vw;
+  /*** Contact ***/
+  .contact{
+    min-height: 85vh;
+    &__location, &__phone, &__email {
+      padding: 1.5em 4em;
+      font-size: 1.2em;
+    }
+    &__email{
+      color: $color_bronce;
+      background: url("../images/iconoMail.svg") no-repeat left;
+      background-size: 2em;
+    }
+    &__phone{
+      background: url("../images/whatsapp.svg") no-repeat left;
+      background-size: 2em;
+    }
+    &__location{
+      background: url("../images/iconoDirec.svg") no-repeat left;
+      background-size: 2em;
+    }
   }
 }
-
-
-
+@media screen and (min-width:1200px) {
+  /*** Contact ***/
+  .contact{
+    min-height: 90vh;
+    &__text{
+      padding-bottom: 1em;
+      line-height: 1.6;
+      width: 80%;
+    }
+  }
+}
+@media screen and (min-width:1500px) {
+  /*** Contact ***/
+  .contact__text, .gallery__text{
+    font-size: 1.2em;
+  }
+}
