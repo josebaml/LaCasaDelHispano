@@ -342,7 +342,7 @@ body {
     font-size: .9em; }
   .contact__email {
     color: #FF7F00;
-    background: url("../images/iconoMail.svg") no-repeat left;
+    background: url("../images/social_email.svg") no-repeat left;
     background-size: 0.9em; }
   .contact__phone {
     background: url("../images/whatsapp.svg") no-repeat left;
@@ -424,7 +424,7 @@ body {
 
   .contact__email {
     color: #FF7F00;
-    background: url("../images/iconoMail.svg") no-repeat left;
+    background: url("../images/social_email.svg") no-repeat left;
     background-size: 1em; }
 
   .contact__phone {
@@ -467,7 +467,7 @@ body {
       padding: 1em 3em; }
     .contact__email {
       color: #FF7F00;
-      background: url("../images/iconoMail.svg") no-repeat left;
+      background: url("../images/social_email.svg") no-repeat left;
       background-size: 1.5em; }
     .contact__phone {
       background: url("../images/whatsapp.svg") no-repeat left;
