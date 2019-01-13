@@ -368,21 +368,21 @@ body{
     margin-bottom: 1.5em;
   }
   &__location, &__phone, &__email {
-    padding: .7em 1.7em;
+    padding: .7em 2em;
     font-size: .9em;
   }
   &__email{
     color: $color_bronce;
     background: url("../images/social_email.svg") no-repeat left;
-    background-size: 0.9em;
+    background-size: auto 22px;
   }
   &__phone{
     background: url("../images/whatsapp.svg") no-repeat left;
-    background-size: 0.9em;
+    background-size: auto 22px;
   }
   &__location{
     background: url("../images/iconoDirec.svg") no-repeat left;
-    background-size: 0.9em;
+    background-size: auto 22px;
   }
   &__dataMap{
     display: -webkit-box;
@@ -464,21 +464,21 @@ body{
   }
   /*** Contact ***/
   .contact__location, .contact__phone, .contact__email {
-    padding: 1em 2em;
+    padding: 1em 2.5em;
     font-size: 1em;
   }
   .contact__email{
     color: $color_bronce;
     background: url("../images/social_email.svg") no-repeat left;
-    background-size: 1em;
+    background-size: auto 30px;
   }
   .contact__phone{
     background: url("../images/whatsapp.svg") no-repeat left;
-    background-size: 1em;
+    background-size: auto 30px;
   }
   .contact__location{
     background: url("../images/iconoDirec.svg") no-repeat left;
-    background-size: 1em;
+    background-size: auto 30px;
   }
 
 }
@@ -517,22 +517,30 @@ body{
       margin-bottom: 0;
       align-items: flex-start;
     }
+    &__location::before{
+      content: "";
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      color: red;
+}
     &__location, &__phone, &__email {
       padding: 1em 3em;
-      //font-size: 1.2em;
     }
     &__email{
       color: $color_bronce;
       background: url("../images/social_email.svg") no-repeat left;
-      background-size: 1.5em;
+      background-size: auto 32px;
     }
     &__phone{
       background: url("../images/whatsapp.svg") no-repeat left;
-      background-size: 1.5em;
+      background-size: auto 32px;
     }
     &__location{
       background: url("../images/iconoDirec.svg") no-repeat left;
-      background-size: 1.5em;
+      background-size: auto 32px;
     }
     &__map{
       order: 1;
@@ -652,6 +660,20 @@ body{
   /*** Contact ***/
   .contact{
     min-height: 90vh;
+    &__email{
+      color: $color_bronce;
+      background: url("../images/social_email.svg") no-repeat left;
+      background-size: auto 36px;
+
+    }
+    &__phone{
+      background: url("../images/whatsapp.svg") no-repeat left;
+      background-size: auto 36px;
+    }
+    &__location{
+      background: url("../images/iconoDirec.svg") no-repeat left;
+      background-size: auto 36px;
+    }
     &__prices{
       padding-bottom: 1em;
       line-height: 1.6;
