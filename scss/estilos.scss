@@ -267,6 +267,16 @@ body{
     text-align: justify;
     line-height: 1.5;
   }
+  .house__text_a{
+    color: $color_bronce;
+    font-size: 1.1em;
+    font-weight: 600;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+    &:hover{
+      color: #000;
+    }
+  }
 /***** Gallery Section *****/
 .gallery{
   background-color: $color_rojo;
@@ -379,6 +389,14 @@ body{
   &__phone{
     background: url("../images/whatsapp.svg") no-repeat left;
     background-size: auto 22px;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+    &:active{
+      color: $color_bronce;
+    }
+    &:hover{
+      color: $color_bronce;
+    }
   }
   &__location{
     background: url("../images/iconoDirec.svg") no-repeat left;

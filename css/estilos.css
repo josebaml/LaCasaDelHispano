@@ -251,6 +251,15 @@ body {
   text-align: justify;
   line-height: 1.5; }
 
+.house__text_a {
+  color: #FF7F00;
+  font-size: 1.1em;
+  font-weight: 600;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in; }
+  .house__text_a:hover {
+    color: #000; }
+
 /***** Gallery Section *****/
 .gallery {
   background-color: #9E0420;
@@ -346,7 +355,13 @@ body {
     background-size: auto 22px; }
   .contact__phone {
     background: url("../images/whatsapp.svg") no-repeat left;
-    background-size: auto 22px; }
+    background-size: auto 22px;
+    -webkit-transition: all .4s ease-in;
+    transition: all .4s ease-in; }
+    .contact__phone:active {
+      color: #FF7F00; }
+    .contact__phone:hover {
+      color: #FF7F00; }
   .contact__location {
     background: url("../images/iconoDirec.svg") no-repeat left;
     background-size: auto 22px; }
@@ -569,7 +584,7 @@ body {
     .header__a {
       padding: 0 .7em; }
 
-  /*** Títles ***/
+  /*** T├¡tles ***/
   .domus__title, .gallery_title, .contact__title {
     padding-top: 2.5em; }
 
