@@ -273,6 +273,9 @@ body{
     font-weight: 600;
     -webkit-transition: all .4s ease-in;
     transition: all .4s ease-in;
+    &:active{
+      color: $color_bronce;
+    }
     &:hover{
       color: #000;
     }
@@ -391,9 +394,6 @@ body{
     background-size: auto 22px;
     -webkit-transition: all .4s ease-in;
     transition: all .4s ease-in;
-    &:active{
-      color: $color_bronce;
-    }
     &:hover{
       color: $color_bronce;
     }

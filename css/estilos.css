@@ -257,6 +257,8 @@ body {
   font-weight: 600;
   -webkit-transition: all .4s ease-in;
   transition: all .4s ease-in; }
+  .house__text_a:active {
+    color: #FF7F00; }
   .house__text_a:hover {
     color: #000; }
 
@@ -358,8 +360,6 @@ body {
     background-size: auto 22px;
     -webkit-transition: all .4s ease-in;
     transition: all .4s ease-in; }
-    .contact__phone:active {
-      color: #FF7F00; }
     .contact__phone:hover {
       color: #FF7F00; }
   .contact__location {
